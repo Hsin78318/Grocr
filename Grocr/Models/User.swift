@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct User {
+    let uid: String
+    let email: String
+    
+    init(uid: String, email: String) {
+        self.uid = uid
+        self.email = email
+    }
+}

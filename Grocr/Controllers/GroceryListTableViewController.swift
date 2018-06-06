@@ -11,7 +11,11 @@ import Firebase
 
 class GroceryListTableViewController: UITableViewController {
     
+    let listToUsers = "ListToUsers"
     let ref = Database.database().reference(withPath:"grocery-items")
+    
+    var item:[GroceryItem] = []
+//    let user: User!
     
     
     
