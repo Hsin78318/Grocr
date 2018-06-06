@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    //Login
     @IBAction func loginDidTouch(_ sender: Any) {
        guard
         let email = textFieldLoginEmail.text,
@@ -42,7 +42,52 @@ class ViewController: UIViewController {
         else  {
             return
         }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+            if let error = error, user == nil {
+                let alert = UIAlertController(title: "Sign In Failed", message: error.localizedDescription, preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK!", style: .default ))
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
+    
+    //SignUp
+    @IBAction func SignUpDidTouch(_ sender: Any) {
+        let alert = UIAlertController(title: "Register", message: "Register", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            
+            let emailField = alert.textFields![0]
+            let passwordField = alert.textFields![1]
+            
+            Auth.auth().createUser(
+                withEmail: emailField.text!,
+                password: passwordField.text!) {user, error in
+                    if error == nil {
+                        Auth.auth().signIn(withEmail: self.textFieldLoginEmail.text!,
+                                           password: self.textFieldLoginPassword.text!)
+                    }
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel)
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
+    
+    
    
     
     
