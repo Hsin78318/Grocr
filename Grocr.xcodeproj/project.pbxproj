@@ -16,6 +16,8 @@
 		E357AB7720C6914F006540DA /* GroceryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB7620C6914F006540DA /* GroceryListTableViewController.swift */; };
 		E357AB7920C69166006540DA /* OnlineUsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB7820C69166006540DA /* OnlineUsersTableViewController.swift */; };
 		E357AB7D20C693F6006540DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E357AB7C20C693F6006540DA /* GoogleService-Info.plist */; };
+		E357AB8120C69E8E006540DA /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB8020C69E8D006540DA /* GroceryItem.swift */; };
+		E357AB8320C69EAA006540DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB8220C69EAA006540DA /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		E357AB7620C6914F006540DA /* GroceryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListTableViewController.swift; sourceTree = "<group>"; };
 		E357AB7820C69166006540DA /* OnlineUsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineUsersTableViewController.swift; sourceTree = "<group>"; };
 		E357AB7C20C693F6006540DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E357AB8020C69E8D006540DA /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
+		E357AB8220C69EAA006540DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +88,9 @@
 		E357AB6320C690B8006540DA /* Grocr */ = {
 			isa = PBXGroup;
 			children = (
+				E357AB8520C6A32E006540DA /* Controllers */,
+				E357AB8420C6A319006540DA /* Models */,
 				E357AB6420C690B8006540DA /* AppDelegate.swift */,
-				E357AB6620C690B8006540DA /* ViewController.swift */,
-				E357AB7620C6914F006540DA /* GroceryListTableViewController.swift */,
-				E357AB7820C69166006540DA /* OnlineUsersTableViewController.swift */,
 				E357AB6820C690B8006540DA /* Main.storyboard */,
 				E357AB6B20C690B9006540DA /* Assets.xcassets */,
 				E357AB6D20C690B9006540DA /* LaunchScreen.storyboard */,
@@ -95,6 +98,25 @@
 				E357AB7C20C693F6006540DA /* GoogleService-Info.plist */,
 			);
 			path = Grocr;
+			sourceTree = "<group>";
+		};
+		E357AB8420C6A319006540DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E357AB8020C69E8D006540DA /* GroceryItem.swift */,
+				E357AB8220C69EAA006540DA /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E357AB8520C6A32E006540DA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E357AB6620C690B8006540DA /* ViewController.swift */,
+				E357AB7820C69166006540DA /* OnlineUsersTableViewController.swift */,
+				E357AB7620C6914F006540DA /* GroceryListTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,7 +130,7 @@
 				E357AB5D20C690B8006540DA /* Sources */,
 				E357AB5E20C690B8006540DA /* Frameworks */,
 				E357AB5F20C690B8006540DA /* Resources */,
-				82B6DC9DEB956EDE53395C20 /* [CP] Embed Pods Frameworks */,
+				AA63A0B125901A68B2DB1736 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,7 +189,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		82B6DC9DEB956EDE53395C20 /* [CP] Embed Pods Frameworks */ = {
+		AA63A0B125901A68B2DB1736 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -175,11 +197,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Grocr/Pods-Grocr-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +238,9 @@
 			files = (
 				E357AB6720C690B8006540DA /* ViewController.swift in Sources */,
 				E357AB7920C69166006540DA /* OnlineUsersTableViewController.swift in Sources */,
+				E357AB8320C69EAA006540DA /* User.swift in Sources */,
 				E357AB7720C6914F006540DA /* GroceryListTableViewController.swift in Sources */,
+				E357AB8120C69E8E006540DA /* GroceryItem.swift in Sources */,
 				E357AB6520C690B8006540DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,10 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Grocr/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.com.Grocr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -380,10 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Grocr/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.com.Grocr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

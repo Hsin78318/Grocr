@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class GroceryListTableViewController: UITableViewController {
+    
+    let ref = Database.database().reference(withPath:"grocery-items")
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
