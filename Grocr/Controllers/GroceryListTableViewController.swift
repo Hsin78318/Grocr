@@ -13,7 +13,24 @@ class GroceryListTableViewController: UITableViewController {
     
     let ref = Database.database().reference(withPath:"grocery-items")
     
-
+    
+    
+    @IBAction func addButtonDidTouch(_ sender: Any) {
+        let alert = UIAlertController(title: "Grocery Item",
+                                      message: "Add an Item",
+                                      preferredStyle: .alert)
+//        let saveAction = UIAlertAction(title: "Save",
+//                                       style: .default) {
+                                        
+                             
+                                        
+                                        
+        }
+        
+        
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

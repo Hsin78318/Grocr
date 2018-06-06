@@ -8,5 +8,6 @@ target 'Grocr' do
   # Pods for Grocr
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'Firebase/Auth'
 
 end

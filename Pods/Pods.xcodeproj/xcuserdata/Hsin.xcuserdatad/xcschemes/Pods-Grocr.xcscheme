@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2F82EED280C9489EFD63F53B0FCE67DC"
+               BlueprintIdentifier = "D3FD02092EFEE5FF90676E1C7BB75055"
                BuildableName = "Pods_Grocr.framework"
                BlueprintName = "Pods-Grocr"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F82EED280C9489EFD63F53B0FCE67DC"
+            BlueprintIdentifier = "D3FD02092EFEE5FF90676E1C7BB75055"
             BuildableName = "Pods_Grocr.framework"
             BlueprintName = "Pods-Grocr"
             ReferencedContainer = "container:Pods.xcodeproj">
